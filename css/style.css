@@ -4,4 +4,81 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Hind Siliguri", serif;
+    user-select: none;
+}
+
+/* Forest section  */
+.forest {
+    background: #292929;
+    color: #f4f4f4;
+    padding: 50px 0px;
+}
+.main_container {
+    padding: 0px 5%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-sizing: 5px 5px 20px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+.box img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    transition: .5s;
+    border-radius: 10px;
+}
+.box:hover .overlay {
+    height: 100%;
+}
+.overlay {
+    height: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgb(9, 61, 9) 60%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 14px;
+    transition: height .5s;
+}
+.overlay h2 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+button {
+    margin-top: 10px;
+    columns: #262626;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #f4f4f4;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+    padding: 5px 15px;
+    cursor: pointer;
+    user-select: none;
+    transition: .3s;
+}
+button:hover {
+    transform: scale(1.1);
 }
